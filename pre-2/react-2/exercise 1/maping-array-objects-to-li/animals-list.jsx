@@ -11,7 +11,7 @@ const animals = [
 ];
 
 const animalsInHtml = animals.map((singleAnimals, index) => {
-  return <li>{singleAnimals.label}</li>;
+  return <li key={index}>{singleAnimals.label}</li>;
 });
 
 createRoot.render(<ul>{animalsInHtml}</ul>, document.querySelector("#root"));
