@@ -5,7 +5,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 const Header = () => {
    const dispatch = useDispatch();
-const {  total } = useSelector((state) => state);
+const { cart } = useSelector((state) => state);
+const { total } = cart; 
 
 
 

@@ -2,11 +2,11 @@ import { ADDTOCARD } from "./action";
 
 
 
- const addToCart = (product) => {
-   return {
-     type: ADDTOCARD,
-     payload: product,
-   };
- };
+const addToCart = (product) => {
+  return {
+    type: ADDTOCARD,
+    payload: product,
+  };
+};
 
-export default addToCart;
+export default addToCart; 

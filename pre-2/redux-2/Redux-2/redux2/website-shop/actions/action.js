@@ -1,2 +1,1 @@
-export const ADDTOCARD ="product/add";
-
+export const ADDTOCARD = "ADDTOCARD";

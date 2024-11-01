@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Counter from "./Counter";
+
 import Card from "../website-shop/Card";
 import Header from "../website-shop/Header";
 
@@ -7,7 +7,6 @@ function App() {
   const [modalMessages, setModalMessages] = useState([]);
   return (
     <>
-      {/* <Counter/> */}
       <Header />
       <Card
         shawModalMessage={(message) =>

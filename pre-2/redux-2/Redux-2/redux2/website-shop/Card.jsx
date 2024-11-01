@@ -9,23 +9,18 @@ import addToCart from "./actions/action-creator"
 function Card({ shawModalMessage }) {
 
   const dispatch = useDispatch();
-  const { products, total } = useSelector((state) => state); 
-  const handlModalMessage = () => {
-    shawModalMessage("Added  to cart!");
-  };
+  const [successMessage, setSuccessMessage] = useState(null);
+  const { products } = useSelector((state) => state); 
   const handleAddToCart = (product) => {
-    dispatch(
-      addToCart({
-        type: "product / add",
-        payload: product,
-      })
-    );
-  };
+    dispatch(addToCart(product));
+    setSuccessMessage(`${product.name} added to cart!`);
+    shawModalMessage(successMessage);
+  }; 
 
   return (
     <div className="cardContainer">
       {products.map((card, index) => (
-        <div className="card" key={index}>
+        <div className="card" key={index} onClick={() => handleAddToCart(card)}>
           <img src={card.src} alt={card.name} />
           <div className="cardInner">
             <div className="cardInfoTop deemphasise">{card.type}</div>
@@ -43,11 +38,7 @@ function Card({ shawModalMessage }) {
               {card.offPrice && <span className="offPrice">${card.price}</span>}
             </div>
             <div className="add-to-card">
-              <button
-                onClick={(() => handleAddToCart(product), handlModalMessage)}
-              >
-                Add to Cart
-              </button>
+              <button onClick={() => handleAddToCart()}>Add to Cart</button>
             </div>
           </div>
         </div>

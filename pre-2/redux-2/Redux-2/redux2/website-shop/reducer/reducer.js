@@ -68,24 +68,31 @@ const initialState = {
     },
   ],
 
-  total: 0,
+  cart: {
+    items: [],
+    total: 0,
+  },
 };  
 
 const sumReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADDTOCARD:
-      const updatedTotal = updatedCart.reduce(
+    case "ADDTOCARD":
+      const updatedCartItems = [...state.cart.items, action.payload];
+      const updatedTotal = updatedCartItems.reduce(
         (total, product) =>
           total + (product.offPrice ? product.offPrice : product.price),
         0
       );
       return {
         ...state,
-
-        total: updatedTotal,
+        cart: {
+          items: updatedCartItems,
+          total: updatedTotal,
+        },
       };
+    default:
+      return state;
   }
-};    
-
+};
 
 export default sumReducer;
