@@ -2,11 +2,12 @@ import "./header.css";
 import React, { useState } from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 const Header = () => {
-  const cart = useSelector((state) => state.cart);
-  const totalPrice = useSelector((state) => state.totalPrice);
+   const dispatch = useDispatch();
+const {  total } = useSelector((state) => state);
 
-//   const cartCount = cart.length;
+
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,10 +28,7 @@ const Header = () => {
           <li className="menu-item">Contact Us</li>
         </ul>
         <div className="price">
-          {/* <p>${totalPrice.toFixed(2)}</p> */}
-          {/* {cartCount > 0 && (
-            <span className="cart-count-badge">{cartCount}</span>
-          )} */}
+          {total}
           <a href="#">
             <MdOutlineShoppingCart />
           </a>

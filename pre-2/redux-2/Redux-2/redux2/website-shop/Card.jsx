@@ -4,17 +4,22 @@ import { AiFillStar } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux"; 
 import addToCart from "./actions/action-creator"
-import { products } from "./data-product";
 
 
 function Card({ shawModalMessage }) {
 
   const dispatch = useDispatch();
+  const { products, total } = useSelector((state) => state); 
   const handlModalMessage = () => {
     shawModalMessage("Added  to cart!");
   };
-  const handleAddToCart = (products) => {
-    dispatch(addToCart(products));
+  const handleAddToCart = (product) => {
+    dispatch(
+      addToCart({
+        type: "product / add",
+        payload: product,
+      })
+    );
   };
 
   return (
@@ -38,7 +43,9 @@ function Card({ shawModalMessage }) {
               {card.offPrice && <span className="offPrice">${card.price}</span>}
             </div>
             <div className="add-to-card">
-              <button onClick={(handleAddToCart, handlModalMessage)}>
+              <button
+                onClick={(() => handleAddToCart(product), handlModalMessage)}
+              >
                 Add to Cart
               </button>
             </div>

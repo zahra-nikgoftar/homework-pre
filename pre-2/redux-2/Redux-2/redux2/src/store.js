@@ -1,12 +1,8 @@
 
 import counterReducer from "../counter/reducers-counter/reducerCount";
 import sumReducer from "../website-shop/reducer/reducer";
-import { createStore, combineReducers } from "redux";
-const rootReducer = combineReducers({
-  sum: sumReducer,
-  counter: counterReducer,
-});
+import { createStore } from "redux";
 
-const store = createStore(rootReducer);
+const store = createStore(sumReducer, counterReducer);
 
 export default store;
