@@ -6,15 +6,15 @@ import { useSelector } from "react-redux";
 import addToCart from "./actions/action-creator"
 
 
-function Card({ shawModalMessage }) {
+function Card() {
 
   const dispatch = useDispatch();
-  const [successMessage, setSuccessMessage] = useState(null);
+  
   const { products } = useSelector((state) => state); 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
-    setSuccessMessage(`${product.name} added to cart!`);
-    shawModalMessage(successMessage);
+    (alert(`${product.name} added to cart!`));
+    
   }; 
 
   return (
