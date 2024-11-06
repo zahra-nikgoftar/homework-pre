@@ -113,8 +113,8 @@ body {
 /* Filter Bar */
 .filter-selection-container {
   display: flex;
-  width: 40%;
-  
+  width: 50%;
+  margin-left: 13rem;
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;

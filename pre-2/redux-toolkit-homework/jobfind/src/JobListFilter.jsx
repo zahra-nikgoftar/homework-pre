@@ -2,7 +2,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./JobListFilter.css"; 
-import  data  from '../../redux-toolkit-homework/data.json'; 
+import  data  from '../public/data.json'; 
 import { addFilter, removeFilter, clearFilters } from "./redux/jobSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons/faXmark";
@@ -58,7 +58,7 @@ function JobList() {
               </button>
             </div>
           ))}
-          <button onClick={handleClearAllFilters} className="clear-all-btn">
+          <button onClick={handleClearAllFilters} className="filter-btn">
             Clear All
           </button>
         </div>
