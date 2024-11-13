@@ -1,0 +1,44 @@
+.card-contaner{
+  display: flex;
+  height: 20rem;
+  
+
+
+}.card-task {
+  width: 23rem;
+  padding: 1rem;
+  background-color: rgb(167, 92, 236);
+  border-radius: 5px;
+  color: rgb(219, 234, 234); 
+  margin: 1rem;
+  height: 40vh;
+ 
+}
+
+
+
+.date{
+    width: 1.25rem;
+}
+
+.deadline{
+    display: inline-block;
+    margin: 1rem;
+}
+.conraner-icons{
+  display: flex;
+  justify-content: space-between;
+}
+.contaner-icon-tarsh-star-arrow img{
+  width: 1.1rem;
+  
+}
+.contaner-icon-tarsh-star-arrow button{
+  background-color: rgba(164, 70, 70, 0.001);
+  border: none;
+}
+
+.trash-icon{
+  
+  color: antiquewhite;
+}

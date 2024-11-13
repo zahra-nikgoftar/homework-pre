@@ -1,0 +1,17 @@
+.contaner-nav-body {
+  display: flex;
+  width: 63vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+.button-body {
+  padding: 0.5rem 0.5rem;
+  background-color: rgb(167, 92, 236);
+  color: rgb(248, 244, 240);
+  border: none;
+  border-radius: 7px;
+  margin: 1rem;
+}

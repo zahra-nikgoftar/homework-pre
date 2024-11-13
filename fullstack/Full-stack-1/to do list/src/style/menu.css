@@ -1,0 +1,11 @@
+.contaner-menu {
+display: flex;
+justify-content: space-between;
+ width: 63vw;
+ padding: 1rem;
+}
+.contaner-menu button{
+   border: none;
+    width: 2rem;
+    background-color: rgba(245, 245, 220, 0);
+}

@@ -1,0 +1,16 @@
+
+.nav-contaner{
+     display: flex;
+     flex-direction: column;
+     background-color: rgb(245, 243, 245);
+     width: 38vh;
+     min-height: 100vh;
+     
+}
+
+.button{
+background-color: rgb(151, 61, 236);
+width: 85%;
+margin-top: 3rem;
+margin-bottom: 3rem;
+}
