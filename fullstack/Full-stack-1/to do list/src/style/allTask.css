@@ -1,44 +1,45 @@
-.card-contaner{
+.tasks-container {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .card-contaner {
   display: flex;
   height: 20rem;
-  
+  width: 3rem;
+} */
 
-
-}.card-task {
-  width: 23rem;
-  padding: 1rem;
+.card-task {
+  width: 18rem;
+  padding: 0.5rem;
   background-color: rgb(167, 92, 236);
   border-radius: 5px;
-  color: rgb(219, 234, 234); 
+  color: rgb(219, 234, 234);
+  margin: 0.5rem;
+  height: 45vh;
+}
+
+.date {
+  width: 1.25rem;
+}
+
+.deadline {
+  display: inline-block;
   margin: 1rem;
-  height: 40vh;
- 
 }
 
-
-
-.date{
-    width: 1.25rem;
-}
-
-.deadline{
-    display: inline-block;
-    margin: 1rem;
-}
-.conraner-icons{
+.conraner-icons {
   display: flex;
   justify-content: space-between;
 }
-.contaner-icon-tarsh-star-arrow img{
+
+.contaner-icon-tarsh-star-arrow img {
   width: 1.1rem;
-  
-}
-.contaner-icon-tarsh-star-arrow button{
-  background-color: rgba(164, 70, 70, 0.001);
-  border: none;
 }
 
-.trash-icon{
-  
-  color: antiquewhite;
+.contaner-icon-tarsh-star-arrow button {
+  background-color: rgba(164, 70, 70, 0.001);
+  border: none;
+  cursor: pointer;
 }

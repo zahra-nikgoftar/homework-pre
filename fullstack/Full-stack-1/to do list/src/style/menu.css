@@ -1,7 +1,7 @@
 .contaner-menu {
 display: flex;
 justify-content: space-between;
- width: 63vw;
+ width: 62vw;
  padding: 1rem;
 }
 .contaner-menu button{

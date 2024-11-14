@@ -17,22 +17,34 @@ function Menu() {
           </button>
         </div>
         <div>
-          <Dropdown data-bs-theme="dark">
+          <Dropdown>
             <Dropdown.Toggle
               id="dropdown-button-dark-example1"
-              variant="secondary"
+              style={{
+                background: "white",
+                width: "7rem",
+                color: "black",
+                border: "1px solid prple",
+              }}
             >
-              Dropdown Button
+              sort by
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
               <Dropdown.Item href="#/action-1" active>
-                Action
+                sort by
               </Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-              
-              
+              <Dropdown.Item href="#/Order-added">Order added</Dropdown.Item>
+              <Dropdown.Item href="#/Earlier-first">
+                Earlier first
+              </Dropdown.Item>
+              <Dropdown.Item href="#/Later-first">Later first</Dropdown.Item>
+              <Dropdown.Item href="#/Complated-first">
+                Complated first
+              </Dropdown.Item>
+              <Dropdown.Item href="#/Uncomplated-first">
+                Uncomplated first
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
