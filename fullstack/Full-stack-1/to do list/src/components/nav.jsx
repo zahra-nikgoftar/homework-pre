@@ -88,7 +88,6 @@ const NavSide = () => {
               title="Directories"
               id="directories-dropdown"
               className="nav-link custom-dropdown"
-              
             >
               <NavDropdown.Item
                 as={NavLink}
@@ -137,20 +136,10 @@ const NavSide = () => {
               <NavDropdown.Item
                 as={NavLink}
                 to="/directories/folder3"
-                className="nav-link custom-dropdown-item"
-                style={({ isActive }) =>
-                  isActive
-                    ? {
-                        color: "red",
-                        background: "rgb(231, 213, 248)",
-                        width: "28vh",
-
-                        borderRight: "2px solid red",
-                      }
-                    : undefined
-                }
+                className="nav-link custom-dropdown-item new-task"
+               
               >
-                Folder 3
+                + new
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

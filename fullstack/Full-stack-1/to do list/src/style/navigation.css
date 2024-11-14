@@ -5,6 +5,7 @@
      background-color: rgb(245, 243, 245);
      width: 38vh;
      min-height: 100vh;
+     min-width: 38vh;
      
 }
 
@@ -26,4 +27,10 @@ margin-bottom: 3rem;
   background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+.new-task{
+     border: 1px dashed rgb(153, 146, 146)!important;
+     width: 5rem;
+     background-color:rgb(245, 243, 245)!important;
 }
