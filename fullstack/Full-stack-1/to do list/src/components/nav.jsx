@@ -170,6 +170,9 @@ const handleCloseM = () => setAddDirectory(false);
           <Modal.Title>Edit Directory</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "#f3e8ff" }}>
+          <label htmlFor="directoryName" style={{ marginBottom: "0.5rem" }}>
+            title:
+          </label>
           <input
             type="text"
             placeholder="Enter new name"
@@ -194,6 +197,9 @@ const handleCloseM = () => setAddDirectory(false);
           <Modal.Title>Create new directory</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "#f3e8ff" }}>
+          <label htmlFor="directoryName" style={{ marginBottom: "0.5rem" }}>
+            title:
+          </label>
           <input
             type="text"
             placeholder="Enter a directory name"
