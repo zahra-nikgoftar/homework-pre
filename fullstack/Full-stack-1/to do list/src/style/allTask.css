@@ -43,3 +43,26 @@
   border: none;
   cursor: pointer;
 }
+.nav-contaner .nav-link.secondary:hover .icon-container {
+  display: inline-block; 
+}
+
+.nav-contaner .nav-link .icon-container {
+  position: absolute;
+  right: 10px;
+  display: none; 
+  
+}
+
+.nav-contaner .nav-link .icon-container button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+  
+
+.nav-contaner .nav-link .icon-container img {
+  width: 1rem; 
+  
+}

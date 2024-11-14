@@ -1,6 +1,6 @@
-
 import React from "react";
 import "../style/navigation.css";
+import "../style/nav-body.css";
 import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 
@@ -32,82 +32,7 @@ const NavSide = () => {
               }
             >
               All Tasks
-            </NavLink>
-            <NavLink
-              to="/completedTasks"
-              className="nav-link"
-              style={({ isActive }) =>
-                isActive
-                  ? {
-                      color: "red",
-                      background: "rgb(231, 213, 248)",
-                      width: "38vh",
-                      marginLeft: "-1rem",
-                      borderRight: "2px solid red",
-                    }
-                  : undefined
-              }
-            >
-              Completed Tasks
-            </NavLink>
-            <NavDropdown
-              title="Directories"
-              id="directories-dropdown"
-              className="nav-link"
-            >
-              <NavDropdown.Item
-                as={NavLink}
-                to="/directories/folder1"
-                style={({ isActive }) =>
-                  isActive
-                    ? {
-                        color: "red",
-                        background: "rgb(231, 213, 248)",
-                        width: "38vh",
-
-                        borderRight: "2px solid red",
-                      }
-                    : undefined
-                }
-              >
-                Folder 1
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={NavLink}
-                to="/directories/folder2"
-                style={({ isActive }) =>
-                  isActive
-                    ? {
-                        color: "red",
-                        background: "rgb(231, 213, 248)",
-                        width: "38vh",
-
-                        borderRight: "2px solid red",
-                      }
-                    : undefined
-                }
-              >
-                Folder 2
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={NavLink}
-                to="/directories/folder3"
-                className="nav-link"
-                style={({ isActive }) =>
-                  isActive
-                    ? {
-                        color: "red",
-                        background: "rgb(231, 213, 248)",
-                        width: "38vh",
-
-                        borderRight: "2px solid red",
-                      }
-                    : undefined
-                }
-              >
-                Folder 3
-              </NavDropdown.Item>
-            </NavDropdown>
+            </NavLink>{" "}
             <NavLink
               to="/importantTasks"
               className="nav-link"
@@ -126,7 +51,7 @@ const NavSide = () => {
               Important Tasks
             </NavLink>
             <NavLink
-              to="/mainPage"
+              to="/completedTasks"
               className="nav-link"
               style={({ isActive }) =>
                 isActive
@@ -140,24 +65,7 @@ const NavSide = () => {
                   : undefined
               }
             >
-              Main Page
-            </NavLink>
-            <NavLink
-              to="/secondary"
-              className="nav-link"
-              style={({ isActive }) =>
-                isActive
-                  ? {
-                      color: "red",
-                      background: "rgb(231, 213, 248)",
-                      width: "38vh",
-                      marginLeft: "-1rem",
-                      borderRight: "2px solid red",
-                    }
-                  : undefined
-              }
-            >
-              Secondary
+              Completed Tasks
             </NavLink>
             <NavLink
               to="/uncompletedTasks"
@@ -176,6 +84,75 @@ const NavSide = () => {
             >
               Uncompleted Tasks
             </NavLink>
+            <NavDropdown
+              title="Directories"
+              id="directories-dropdown"
+              className="nav-link custom-dropdown"
+              
+            >
+              <NavDropdown.Item
+                as={NavLink}
+                to="/secondary"
+                className="nav-link secondary custom-dropdown-item"
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        color: "red",
+                        background: "rgb(231, 213, 248)",
+                        width: "38vh",
+                        marginLeft: "-1rem",
+                        borderRight: "2px solid red",
+                      }
+                    : undefined
+                }
+              >
+                Secondary
+                <div className="icon-container">
+                  <button>
+                    <img src="../../public/assets/edit.svg" alt="edit" />
+                  </button>
+                  <button>
+                    <img src="../../public/assets/trash.svg" alt="delete" />
+                  </button>
+                </div>
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={NavLink}
+                to="/"
+                className="nav-link custom-dropdown-item"
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        color: "red",
+                        background: "rgb(231, 213, 248)",
+                        width: "38vh",
+                        marginLeft: "-1rem",
+                        borderRight: "2px solid red",
+                      }
+                    : undefined
+                }
+              >
+                Main Page
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={NavLink}
+                to="/directories/folder3"
+                className="nav-link custom-dropdown-item"
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        color: "red",
+                        background: "rgb(231, 213, 248)",
+                        width: "28vh",
+
+                        borderRight: "2px solid red",
+                      }
+                    : undefined
+                }
+              >
+                Folder 3
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
