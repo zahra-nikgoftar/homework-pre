@@ -6,7 +6,7 @@
      width: 38vh;
      min-height: 100vh;
      min-width: 38vh;
-     
+     transition: transform 0.3s ease;
 }
 
 .button{
@@ -33,4 +33,39 @@ margin-bottom: 3rem;
      border: 1px dashed rgb(153, 146, 146)!important;
      width: 5rem;
      background-color:rgb(245, 243, 245)!important;
+}
+
+
+
+.nav-container {  
+    display: flex;  
+    flex-direction: column;  
+    background-color: rgb(245, 243, 245);  
+    width: 38vh;  
+    min-height: 100vh;  
+    min-width: 38vh;  
+    transition: transform 0.3s ease;  
+    position: fixed; /* Keep it fixed to the left */  
+    left: 0;  
+    top: 0;  
+    z-index: 1000;  
+}  
+
+.collapse {  
+    display: none; /* Default to hide */  
+}  
+
+.collapse.show {  
+    display: flex; /* Show when toggled */  
+    flex-direction: column;  
+}  
+
+@media (max-width: 990px) {  
+    .collapse {  
+        display: none; /* Hidden by default */  
+    }  
+
+    .collapse.show {  
+        display: flex; /* Show when sidebar is open */  
+    }  
 }

@@ -13,20 +13,28 @@ import { NavLink, Link } from "react-router-dom";
 
 const NavSide = () => {
   const [showEditModal, setShowEditModal] = useState(false);
+  const [addDirectory, setAddDirectory] = useState(false);
+const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleEditClick = () => setShowEditModal(true);
   const handleClose = () => setShowEditModal(false);
-const [addDirectory, setAddDirectory] = useState(false);
-const handleAddClick = () => setAddDirectory(true);
-const handleCloseM = () => setAddDirectory(false);
+  const handleAddClick = () => setAddDirectory(true);
+  const handleCloseM = () => setAddDirectory(false);
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   return (
     <>
-      <Navbar expand="sm" className="nav-contaner">
+      <Navbar expand="lg" className="nav-contaner">
         <Container>
-          <Navbar.Toggle aria-controls="sideNavbar" />
-          <Navbar.Collapse id="sideNavbar">
-            <Nav className="flex-column mt-4">
-              {" "}
+          <Navbar.Toggle
+            aria-controls="sideNavbar"
+            onClick={toggleSidebar}
+            className="navbar-toggler"
+          />
+          <Navbar.Collapse
+            id="sideNavbar"
+            className={`collapse ${sidebarOpen ? "show" : ""}`}
+          >
+            <Nav className="flex-column ">
               <h3>TO-DO-LIST</h3>
               <Button as={Link} className="button">
                 Add new task
